@@ -22,7 +22,7 @@
         <input class="btn btn-dark" type="submit" value="Submit" [disabled]="!name">
     </form>
 </div>
-<p class="myname text-center">**Natividad, Christine Jasline D.  of WD-302**</p>
+<p class="myname text-center">**Natividad, Christine Jasline D. of WD-302**</p>
     <div class="text-center details">
-        <p *ngIf="submitted"> You have entered: {{name}}, {{email}}, {{phone}}, {{message}}</p>
+        <p *ngIf="submitted"> Thanks for filling up the form! your details are: <br> Name: {{name}} <br> Email: {{email}} <br> Phone number:{{phone}} <br>Message: {{message}}</p>
     </div>
