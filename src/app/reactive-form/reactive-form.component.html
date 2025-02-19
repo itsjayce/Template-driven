@@ -1,1 +1,25 @@
-<p>reactive-form works!</p>
+<h1 class="text-center p-3"> Sample Contact Form</h1>
+<p class="text-center">Do you have any queries, or something to share with us? <br> Feel free to contact us by filling out the form below.</p>
+<div class="d-flex justify-content-center p-2">
+    <form [formGroup]="formData" (ngSubmit)="onClickSubmit(formData.value)">
+        <div class="row p-2">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="input-box  form-control border border-primary" name="name" formControlName="name" placeholder="Juan Cruz" required>
+        </div>
+        <div class="row p-2">
+            <label for="email1" class="form-label">Email address</label>
+            <input type="text" class="input-box form-control border border-primary" name="email" formControlName="name" placeholder="jdcruz@example.com" required>
+        </div>
+        <div class="row p-2">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="phone" class="input-box form-control border border-primary" name="phone" formControlName="name" placeholder="09xx xxx xxxx">
+        </div>
+        <div class="row p-2">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="textarea form-control border border-primary" name="message" rows="3" formControlName="name" placeholder="Message..."></textarea>
+        </div>
+        <input class="btn btn-dark" type="submit" value="Click here">
+    </form>
+</div>
+<p class="text-center">You have entered: {{name}}, {{email}}, {{phone}}, {{message}}</p>
+<p class="myname text-center">**Natividad, Christine Jasline D.  of WD-302**</p>

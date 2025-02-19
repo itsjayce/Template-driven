@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { TemplateDrivenComponent } from "./template-driven/template-driven.component";
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactiveValidationComponent } from './reactive-validation/reactive-validation.component';
@@ -7,7 +7,7 @@ import { ReactiveValidationComponent } from './reactive-validation/reactive-vali
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TemplateDrivenComponent, ReactiveFormComponent, ReactiveValidationComponent],
+  imports: [RouterOutlet, RouterLink, TemplateDrivenComponent, ReactiveFormComponent, ReactiveValidationComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
