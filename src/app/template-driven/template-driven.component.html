@@ -1,0 +1,28 @@
+
+<h1 class="text-center p-3"> Sample Contact Form</h1>
+<p class="text-center">Do you have any queries, or something to share with us? <br> Feel free to contact us by filling out the form below.</p>
+<div class="d-flex justify-content-center p-2">
+    <form (ngSubmit)="onSubmit()">
+        <div class="row p-2">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="input-box  form-control border border-primary" name="name" [(ngModel)]="name" placeholder="Juan Cruz" required>
+        </div>
+        <div class="row p-2">
+            <label for="email1" class="form-label">Email address</label>
+            <input type="text" class="input-box form-control border border-primary" name="email" [(ngModel)]="email" placeholder="jdcruz@example.com" required>
+        </div>
+        <div class="row p-2">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="phone" class="input-box form-control border border-primary" name="phone" [(ngModel)]="phone" placeholder="09xx xxx xxxx">
+        </div>
+        <div class="row p-2">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="textarea form-control border border-primary" name="message" rows="3" [(ngModel)]="message" placeholder="Message..."></textarea>
+        </div>
+        <input class="btn btn-dark" type="submit" value="Submit" [disabled]="!name">
+    </form>
+</div>
+<p class="myname text-center">**Natividad, Christine Jasline D.  of WD-302**</p>
+    <div class="text-center details">
+        <p *ngIf="submitted"> You have entered: {{name}}, {{email}}, {{phone}}, {{message}}</p>
+    </div>
